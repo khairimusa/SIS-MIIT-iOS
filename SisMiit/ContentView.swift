@@ -1,21 +1,29 @@
 //
 //  ContentView.swift
-//  SisMiit
+//  SwiftUI-Auth
 //
-//  Created by Khairi Musa on 23/05/2023.
+//  Created by Derek Hsieh on 1/7/23.
 //
 
 import SwiftUI
+//import FirebaseAuth
 
 struct ContentView: View {
+    
+    @AppStorage("uid") var userID: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        if userID == "" {
+            AuthView()
+        } else {
+            Text("Logged In! \nYour user id is \(userID)")
+            
+            Button("Button title") {
+                print("Button tapped!")
+            }
         }
-        .padding()
+        
     }
 }
 

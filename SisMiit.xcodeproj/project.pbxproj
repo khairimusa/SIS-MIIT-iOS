@@ -11,6 +11,9 @@
 		5E6738312A1C66810080E625 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6738302A1C66810080E625 /* ContentView.swift */; };
 		5E6738332A1C66820080E625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6738322A1C66820080E625 /* Assets.xcassets */; };
 		5E6738362A1C66820080E625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6738352A1C66820080E625 /* Preview Assets.xcassets */; };
+		5E67383E2A1C681B0080E625 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67383D2A1C681B0080E625 /* AuthView.swift */; };
+		5E6738402A1C683E0080E625 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67383F2A1C683E0080E625 /* LoginView.swift */; };
+		5E6738422A1C685B0080E625 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6738412A1C685B0080E625 /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		5E6738302A1C66810080E625 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E6738322A1C66820080E625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E6738352A1C66820080E625 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5E67383D2A1C681B0080E625 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		5E67383F2A1C683E0080E625 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5E6738412A1C685B0080E625 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,7 @@
 		5E67382D2A1C66810080E625 /* SisMiit */ = {
 			isa = PBXGroup;
 			children = (
+				5E67383C2A1C668A0080E625 /* Views */,
 				5E67382E2A1C66810080E625 /* SisMiitApp.swift */,
 				5E6738302A1C66810080E625 /* ContentView.swift */,
 				5E6738322A1C66820080E625 /* Assets.xcassets */,
@@ -65,6 +72,16 @@
 				5E6738352A1C66820080E625 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E67383C2A1C668A0080E625 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E67383D2A1C681B0080E625 /* AuthView.swift */,
+				5E67383F2A1C683E0080E625 /* LoginView.swift */,
+				5E6738412A1C685B0080E625 /* SignupView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E6738312A1C66810080E625 /* ContentView.swift in Sources */,
+				5E6738422A1C685B0080E625 /* SignupView.swift in Sources */,
 				5E67382F2A1C66810080E625 /* SisMiitApp.swift in Sources */,
+				5E6738402A1C683E0080E625 /* LoginView.swift in Sources */,
+				5E67383E2A1C681B0080E625 /* AuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
