@@ -1,14 +1,13 @@
-//
-//  SisMiitApp.swift
-//  SisMiit
-//
-//  Created by Khairi Musa on 23/05/2023.
-//
-
 import SwiftUI
+import FirebaseCore
 
 @main
 struct SisMiitApp: App {
+    
+    init(){
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

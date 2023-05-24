@@ -1,10 +1,3 @@
-//
-//  AuthView.swift
-//  SwiftUI-Auth
-//
-//  Created by Derek Hsieh on 1/7/23.
-//
-
 import SwiftUI
 
 struct AuthView: View {

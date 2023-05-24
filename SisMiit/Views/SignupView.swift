@@ -1,12 +1,5 @@
-//
-//  SignupView.swift
-//  SwiftUI-Auth
-//
-//  Created by Derek Hsieh on 1/7/23.
-//
-
 import SwiftUI
-//import FirebaseAuth
+import FirebaseAuth
 
 struct SignupView: View {
     @State private var email: String = ""
@@ -15,9 +8,6 @@ struct SignupView: View {
     @Binding var currentShowingView: String
     
     private func isValidPassword(_ password: String) -> Bool {
-        // minimum 6 characters long
-        // 1 uppercase character
-        // 1 special char
         
         let passwordRegex = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
         
@@ -44,17 +34,17 @@ struct SignupView: View {
                 
                 HStack {
                     Image(systemName: "mail")
-                    TextField("Email", text: $email)
+                    TextField("Email", text: $email).textInputAutocapitalization(.never)
                     
                     Spacer()
                     
                     
-//                    if(email.count != 0) {
-//                        
-//                        Image(systemName: email.isValidEmail() ? "checkmark" : "xmark")
-//                            .fontWeight(.bold)
-//                            .foregroundColor(email.isValidEmail() ? .green : .red)
-//                    }
+                    if(email.count != 0) {
+                        
+                        Image(systemName: email.isValidEmail() ? "checkmark" : "xmark")
+                            .fontWeight(.bold)
+                            .foregroundColor(email.isValidEmail() ? .green : .red)
+                    }
                     
                 }
                 .foregroundColor(.white)
@@ -110,19 +100,19 @@ struct SignupView: View {
                 Button {
                     
               
-//                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-//
-//                        if let error = error {
-//                            print(error)
-//                            return
-//                        }
-//
-//                        if let authResult = authResult {
-//                            print(authResult.user.uid)
-//                            userID = authResult.user.uid
-//
-//                        }
-//                    }
+                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        
+                        if let authResult = authResult {
+                            print(authResult.user.uid)
+                            userID = authResult.user.uid
+                            
+                        }
+                    }
                     
                 } label: {
                     Text("Create New Account")

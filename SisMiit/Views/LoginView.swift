@@ -1,28 +1,16 @@
-//
-//  LoginView.swift
-//  SwiftUI-Auth
-//
-//  Created by Derek Hsieh on 1/7/23.
-//
-
 import SwiftUI
-//import FirebaseAuth
+import FirebaseAuth
 
 struct LoginView: View {
     @Binding var currentShowingView: String
-    @AppStorage("uid") var userID: String = ""
+    @State var isActive: Bool = false
     
+    @AppStorage("uid") var userID: String = ""
     
     @State private var email: String = ""
     @State private var password: String = ""
-    
-    
-    
+
     private func isValidPassword(_ password: String) -> Bool {
-        // minimum 6 characters long
-        // 1 uppercase character
-        // 1 special char
-        
         let passwordRegex = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
         
         return passwordRegex.evaluate(with: password)
@@ -33,35 +21,33 @@ struct LoginView: View {
             Color.white.edgesIgnoringSafeArea(.all)
             
             VStack {
-//                HStack {
-//                    Text("Welcome Back!")
-//                        .font(.largeTitle)
-//                        .bold()
-//                    
-//                    Spacer()
-//                }
-//                .padding()
-//                .padding(.top)
-                
-                Spacer()
-                
-                Image(systemName: "building.2").resizable().frame(width: 100.0, height: 100.0).foregroundColor(.accentColor)
-                Text("STUDENT INFORMATION SYSTEM")
-                Text("MIIT")
-                                
                 HStack {
-                    Image(systemName: "lanyardcard")
-                    TextField("Student ID", text: $email)
+                    Text("Welcome Back!")
+                        .font(.largeTitle)
+                        .bold()
+                    
+                    Spacer()
+                }
+                .padding()
+                .padding(.top)
+                
+                                Image(systemName: "building.2").resizable().frame(width: 100.0, height: 100.0).foregroundColor(.accentColor)
+                                Text("STUDENT INFORMATION SYSTEM")
+                                Text("MIIT")
+                
+                HStack {
+                    Image(systemName: "mail")
+                    TextField("Email", text: $email).textInputAutocapitalization(.never)
                     
                     Spacer()
                     
                     
-//                    if(email.count != 0) {
-//
-//                        Image(systemName: email.isValidEmail() ? "checkmark" : "xmark")
-//                            .fontWeight(.bold)
-//                            .foregroundColor(email.isValidEmail() ? .green : .red)
-//                    }
+                    if(email.count != 0) {
+                        
+                        Image(systemName: email.isValidEmail() ? "checkmark" : "xmark")
+                            .fontWeight(.bold)
+                            .foregroundColor(email.isValidEmail() ? .green : .red)
+                    }
                     
                 }
                 .padding()
@@ -76,8 +62,8 @@ struct LoginView: View {
                 
                 
                 HStack {
-                    Image(systemName: "mail")
-                    SecureField("IC Number", text: $password)
+                    Image(systemName: "lock")
+                    SecureField("Password", text: $password)
                     
                     Spacer()
                     
@@ -115,21 +101,21 @@ struct LoginView: View {
                 
                 
                 Button {
-//                    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-//                        if let error = error {
-//                            print(error)
-//                            return
-//                        }
-//
-//                        if let authResult = authResult {
-//                            print(authResult.user.uid)
-//                            withAnimation {
-//                                userID = authResult.user.uid
-//                            }
-//                        }
-//
-//
-//                    }
+                    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                        if let error = error {
+                            print(error)
+                            return
+                        }
+                        
+                        if let authResult = authResult {
+                            print(authResult.user.uid)
+                            withAnimation {
+                                userID = authResult.user.uid
+                            }
+                        }
+                        
+                        
+                    }
                 } label: {
                     Text("Sign In")
                         .foregroundColor(.white)
