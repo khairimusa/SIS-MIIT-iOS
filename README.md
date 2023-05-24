@@ -1,4 +1,4 @@
-# SIS MIIT
+# SIS MIIT iOS
 
 UniKL MIIT Student Information System
 
