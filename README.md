@@ -1,6 +1,6 @@
 # SIS MIIT iOS
 
-UniKL MIIT Student Information System
+UniKL MIIT Student Information System.
 
 # Google Service Info File
 
