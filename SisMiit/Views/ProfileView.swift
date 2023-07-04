@@ -94,29 +94,28 @@ struct ProfileView: View {
                             Text("UniKL MIIT")
                         }
                     }
+                    Section(){
+                        Button(role: .destructive,action: {
+                            let firebaseAuth = Auth.auth()
+                            do {
+                                try firebaseAuth.signOut()
+                                withAnimation {
+                                    userID = ""
+                                }
+                            } catch let signOutError as NSError {
+                                print("Error signing out: %@", signOutError)
+                            }
+                        }) {
+                            Text("Sign Out")
+                        }
+                        .buttonStyle(.bordered)
+                        .tint(.red)
+                        .frame(maxWidth: 300, alignment: .center)
+                    }
+                    .listRowBackground(Color.clear)
+
                 } .navigationTitle(Text("Profile"))
         }
-        
-//        ZStack{
-//            Color.brown
-//            VStack{
-//                Button(action: {
-//                    let firebaseAuth = Auth.auth()
-//                    do {
-//                        try firebaseAuth.signOut()
-//                        withAnimation {
-//                            userID = ""
-//                        }
-//                    } catch let signOutError as NSError {
-//                        print("Error signing out: %@", signOutError)
-//                    }
-//                }) {
-//                    Text("Sign Out")
-//                }
-//                .buttonStyle(.borderedProminent)
-//                .tint(.red)
-//            }
-//        }
     }
 }
 
