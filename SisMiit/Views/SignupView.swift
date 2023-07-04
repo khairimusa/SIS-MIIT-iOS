@@ -55,9 +55,7 @@ struct SignupView: View {
                         .foregroundColor(.white)
                     
                 )
-                
                 .padding()
-                
                 
                 HStack {
                     Image(systemName: "lock")

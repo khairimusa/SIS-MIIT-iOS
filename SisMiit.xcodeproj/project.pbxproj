@@ -47,7 +47,6 @@
 		5E67ABC02A24DCA300803570 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67ABBF2A24DCA300803570 /* ProfileView.swift */; };
 		5EF60E502A1E4C0B0074F2EE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF60E4F2A1E4C0B0074F2EE /* String.swift */; };
 		5EF60E522A1E4CBE0074F2EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EF60E512A1E4CBE0074F2EE /* GoogleService-Info.plist */; };
-		5EF60E552A1E4F210074F2EE /* DialogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF60E542A1E4F210074F2EE /* DialogBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,7 +64,6 @@
 		5E67ABBF2A24DCA300803570 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5EF60E4F2A1E4C0B0074F2EE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5EF60E512A1E4CBE0074F2EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5EF60E542A1E4F210074F2EE /* DialogBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +167,6 @@
 		5EF60E532A1E4F0D0074F2EE /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5EF60E542A1E4F210074F2EE /* DialogBox.swift */,
 				5E67ABBB2A24DC4B00803570 /* BottomNav.swift */,
 			);
 			path = Components;
@@ -281,7 +278,6 @@
 				5EF60E502A1E4C0B0074F2EE /* String.swift in Sources */,
 				5E67ABC02A24DCA300803570 /* ProfileView.swift in Sources */,
 				5E6738312A1C66810080E625 /* ContentView.swift in Sources */,
-				5EF60E552A1E4F210074F2EE /* DialogBox.swift in Sources */,
 				5E6738422A1C685B0080E625 /* SignupView.swift in Sources */,
 				5E67382F2A1C66810080E625 /* SisMiitApp.swift in Sources */,
 				5E67ABBA2A24D44F00803570 /* HomeVIew.swift in Sources */,

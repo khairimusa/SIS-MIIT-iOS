@@ -8,7 +8,7 @@ struct AuthView: View {
         if(currentViewShowing == "login") {
             LoginView(currentShowingView: $currentViewShowing)
                 .preferredColorScheme(.light)
-        } else {
+        } else if(currentViewShowing == "hostelSignUp" || currentViewShowing == "otherSignUp") {
             SignupView(currentShowingView: $currentViewShowing)
                 .preferredColorScheme(.dark)
                 .transition(.move(edge: .bottom))

@@ -4,6 +4,7 @@ import FirebaseAuth
 struct LoginView: View {
     @Binding var currentShowingView: String
     @State var isActive: Bool = false
+    @State private var showRegister = false
     
     @AppStorage("uid") var userID: String = ""
     
@@ -83,22 +84,34 @@ struct LoginView: View {
                     
                 )
                 .padding()
-                
-                
-                Button(action: {
-                    withAnimation {
-                        self.currentShowingView = "signup"
+            
+                Button("Register") {
+                    showRegister = true
+                }
+                .alert("Select residence type", isPresented:$showRegister) {
+                    Button(action: {
+                        withAnimation {
+                            self.currentShowingView = "hostelSignUp"
+                        }
+
+                    }) {
+                        Text("Hostel")
                     }
-                    
-                    
-                }) {
-                    Text("Don't have an account?")
-                        .foregroundColor(.black.opacity(0.7))
+                    Button(action: {
+                        withAnimation {
+                            self.currentShowingView = "otherSignUp"
+                        }
+
+                    }) {
+                        Text("Other")
+                    }
+                    Button("Close", role: .cancel) {}
+                } message: {
+                    Text("Please choose Hostel, if you will be staying in the UniKL Hostel or 'Other' if you are staying elsewhere")
                 }
                 
                 Spacer()
                 Spacer()
-                
                 
                 Button {
                     Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
