@@ -32,7 +32,7 @@ struct LoginView: View {
                 .padding()
                 .padding(.top)
                 
-                                Image(systemName: "building.2").resizable().frame(width: 100.0, height: 100.0).foregroundColor(.accentColor)
+                Image("sismiit_in_app").resizable().frame(width: 150.0, height: 150.0).foregroundColor(.accentColor)
                                 Text("STUDENT INFORMATION SYSTEM")
                                 Text("MIIT")
                 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E618B582A654B3E000CF304 /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E618B572A654B3E000CF304 /* DropdownMenu.swift */; };
+		5E618B5A2A654B49000CF304 /* DropdownMenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E618B592A654B49000CF304 /* DropdownMenuList.swift */; };
+		5E618B5C2A654B6D000CF304 /* DropdownMenuListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E618B5B2A654B6D000CF304 /* DropdownMenuListRow.swift */; };
+		5E618B5E2A654B7F000CF304 /* DropdownMenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E618B5D2A654B7F000CF304 /* DropdownMenuOption.swift */; };
 		5E67382F2A1C66810080E625 /* SisMiitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67382E2A1C66810080E625 /* SisMiitApp.swift */; };
 		5E6738312A1C66810080E625 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6738302A1C66810080E625 /* ContentView.swift */; };
 		5E6738332A1C66820080E625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6738322A1C66820080E625 /* Assets.xcassets */; };
@@ -50,6 +54,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E618B572A654B3E000CF304 /* DropdownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
+		5E618B592A654B49000CF304 /* DropdownMenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuList.swift; sourceTree = "<group>"; };
+		5E618B5B2A654B6D000CF304 /* DropdownMenuListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuListRow.swift; sourceTree = "<group>"; };
+		5E618B5D2A654B7F000CF304 /* DropdownMenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuOption.swift; sourceTree = "<group>"; };
 		5E67382B2A1C66810080E625 /* SisMiit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SisMiit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E67382E2A1C66810080E625 /* SisMiitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisMiitApp.swift; sourceTree = "<group>"; };
 		5E6738302A1C66810080E625 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +112,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E618B562A654AED000CF304 /* DropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5E618B572A654B3E000CF304 /* DropdownMenu.swift */,
+				5E618B592A654B49000CF304 /* DropdownMenuList.swift */,
+				5E618B5B2A654B6D000CF304 /* DropdownMenuListRow.swift */,
+				5E618B5D2A654B7F000CF304 /* DropdownMenuOption.swift */,
+			);
+			path = DropdownMenu;
+			sourceTree = "<group>";
+		};
 		5E6738222A1C66810080E625 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +186,7 @@
 		5EF60E532A1E4F0D0074F2EE /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5E618B562A654AED000CF304 /* DropdownMenu */,
 				5E67ABBB2A24DC4B00803570 /* BottomNav.swift */,
 			);
 			path = Components;
@@ -275,12 +295,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E618B5E2A654B7F000CF304 /* DropdownMenuOption.swift in Sources */,
 				5EF60E502A1E4C0B0074F2EE /* String.swift in Sources */,
 				5E67ABC02A24DCA300803570 /* ProfileView.swift in Sources */,
 				5E6738312A1C66810080E625 /* ContentView.swift in Sources */,
+				5E618B5C2A654B6D000CF304 /* DropdownMenuListRow.swift in Sources */,
 				5E6738422A1C685B0080E625 /* SignupView.swift in Sources */,
 				5E67382F2A1C66810080E625 /* SisMiitApp.swift in Sources */,
+				5E618B582A654B3E000CF304 /* DropdownMenu.swift in Sources */,
 				5E67ABBA2A24D44F00803570 /* HomeVIew.swift in Sources */,
+				5E618B5A2A654B49000CF304 /* DropdownMenuList.swift in Sources */,
 				5E6738402A1C683E0080E625 /* LoginView.swift in Sources */,
 				5E67ABBE2A24DC8600803570 /* DiscoverView.swift in Sources */,
 				5E67ABBC2A24DC4B00803570 /* BottomNav.swift in Sources */,
@@ -413,6 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SisMiit/Preview Content\"";
+				DEVELOPMENT_TEAM = RRP9TR5C5S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -441,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SisMiit/Preview Content\"";
+				DEVELOPMENT_TEAM = RRP9TR5C5S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
