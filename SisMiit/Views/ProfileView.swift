@@ -17,7 +17,7 @@ struct ProfileView: View {
                             .frame(width: 100, height: 100)
                             .overlay(Circle().stroke(Color.blue, lineWidth: 3))
                         
-                        Text("Mohammad Komaru").fontWeight(.bold)    .multilineTextAlignment(.center)
+                        Text("Mohammad Komaru").fontWeight(.bold).multilineTextAlignment(.center)
                         
                         HStack {
                             Text("Student ID")
