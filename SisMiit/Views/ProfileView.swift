@@ -4,6 +4,7 @@ import FirebaseAuth
 struct ProfileView: View {
     
     @AppStorage("uid") var userID: String = ""
+    @State private var showDialog = false
     
     var body: some View {
         
@@ -17,7 +18,7 @@ struct ProfileView: View {
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.blue, lineWidth: 2.0))
                         
-                        Text("Mohammad Khairi Bin Musa").fontWeight(.bold)    .multilineTextAlignment(.center)
+                        Text("Mohammad Komaru").fontWeight(.bold)    .multilineTextAlignment(.center)
                         
                         HStack {
                             Text("Student ID")
@@ -42,7 +43,7 @@ struct ProfileView: View {
                         HStack {
                             Text("Email")
                             Spacer(minLength: 50)
-                            Text("khairimusa@test.com").multilineTextAlignment(.trailing)
+                            Text("komaru17@test.com").multilineTextAlignment(.trailing)
                         }
                     }
                     Section(header: Text("Residential Information")) {
@@ -94,8 +95,9 @@ struct ProfileView: View {
                             Text("UniKL MIIT")
                         }
                     }
-                    Section(){
-                        Button(role: .destructive,action: {
+                    
+                    Section() {
+                        Button(role: .none,action: {
                             let firebaseAuth = Auth.auth()
                             do {
                                 try firebaseAuth.signOut()
@@ -106,13 +108,37 @@ struct ProfileView: View {
                                 print("Error signing out: %@", signOutError)
                             }
                         }) {
-                            Text("Sign Out")
+                            Text("Sign out")
                         }
-                        .buttonStyle(.bordered)
-                        .tint(.red)
-                        .frame(maxWidth: 300, alignment: .center)
                     }
-                    .listRowBackground(Color.clear)
+                    
+                    Section(){
+                        Button("Delete account", role: .destructive) {
+                            showDialog = true
+                        }
+                        .alert("Deleting account!", isPresented:$showDialog) {
+                            Button(role: .destructive,action: {
+                                
+                                Task{
+                                    do {
+                                        try await deleteAccount()
+                                        withAnimation {
+                                            userID = ""
+                                        }
+                                    } catch {
+                                        print(error)
+                                    }
+                                }
+                                
+                            }) {
+                                Text("Yes, delete my account")
+                            }
+                            Button("No", role: .cancel) {}
+                        } message: {
+                            Text("Are you sure you want to delete your acount?")
+                        }
+
+                    }
 
                 } .navigationTitle(Text("Profile"))
         }
@@ -123,4 +149,13 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
     }
+}
+
+func deleteAccount() async throws  {
+    guard let user = Auth.auth().currentUser else {
+        throw URLError(.badURL)
+    }
+    
+    try await user.delete()
+     
 }
