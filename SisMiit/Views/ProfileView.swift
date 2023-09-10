@@ -11,12 +11,11 @@ struct ProfileView: View {
         NavigationView {
                 Form{
                     Section() {
-                        Image("Profile-Image")
-                            .resizable()
-                            .clipped()
-                            .frame(width: 100, height: 100, alignment: .center)
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.blue, lineWidth: 2.0))
+                        Text("👨🏻")
+                            .shadow(radius: 3)
+                            .font(.largeTitle)
+                            .frame(width: 100, height: 100)
+                            .overlay(Circle().stroke(Color.blue, lineWidth: 3))
                         
                         Text("Mohammad Komaru").fontWeight(.bold)    .multilineTextAlignment(.center)
                         
